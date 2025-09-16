@@ -1,7 +1,7 @@
 import SensorPanel from "./components/SensorPanel";
 
 function App() {
-  const wsUrl = "wss://echo.websocket.org";
+  const wsUrl = import.meta.env.VITE_WS_URL || "wss://echo.websocket.org";
   const deviceIds = ["device1", "device2"];
 
   return (
